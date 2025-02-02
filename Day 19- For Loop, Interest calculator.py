@@ -4,7 +4,6 @@ user_Years= int(input("Duration in years:"))
 user_Interest= float(input("Interest: "))
 requested_loan=user_loan
 payout_months = user_Years * 12
-year=0
 
 for i in range (user_Years):
     interest = float (user_Interest/100)
@@ -12,8 +11,7 @@ for i in range (user_Years):
     user_loan+=interest_amount
     user_loan=round(user_loan,2)
     user_loan_interest = float(user_loan + interest_amount)
-    year+=1
-    print("Year",year," the amount is: ",user_loan)
+    print("Year",i+1," the amount is: ",user_loan)
 
 monthly_installment= user_loan/payout_months
 monthly_installment=round(monthly_installment,2)
